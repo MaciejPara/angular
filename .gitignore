@@ -29,3 +29,5 @@ npm-debug.log*
 /platforms
 /plugins
 /www
+/express/node_modules
+/express/package-lock.json

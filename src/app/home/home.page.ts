@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
-import { DataService, Message } from '../services/data.service';
+import {Component, OnInit} from '@angular/core';
+import { DataService, Product } from '../services/data.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit{
   constructor(private data: DataService) {}
 
   refresh(ev) {
@@ -15,8 +15,15 @@ export class HomePage {
     }, 3000);
   }
 
-  getMessages(): Message[] {
-    return this.data.getMessages();
+  getProducts(): Product[] {
+    return this.data.getProducts();
   }
 
+  async ngOnInit(){
+    try {
+      await this.data.getProductsFromAPI();
+    }catch (e) {
+      throw new Error(e);
+    }
+  }
 }

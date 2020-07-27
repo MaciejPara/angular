@@ -1,0 +1,7 @@
+{
+  "user": "postgres",
+  "host": "localhost",
+  "database": "playground",
+  "password": "zaq1@WSX",
+  "port": 5432
+}

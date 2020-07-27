@@ -1,0 +1,15 @@
+<ion-item lines="none" [detail]="false" class="product__item">
+  <ion-label class="ion-text-wrap">
+    <div class="d-flex flex-column">
+      <div *ngIf="product" [routerLink]="'/product/' + product.id" class="d-flex flex-column product__details">
+        <img class="d-inline-flex" src="{{product.thumbNail}}" alt="">
+        <p class="product__name">{{product.name}}</p>
+        <p class="product__price">Price: <span>{{product.price}}</span></p>
+        <p class="d-inline-flex">
+          {{product.shortDescription}}
+        </p>
+      </div>
+      <ion-button (click)="addToBasket()">Add to basket</ion-button>
+    </div>
+  </ion-label>
+</ion-item>

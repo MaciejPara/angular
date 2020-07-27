@@ -1,0 +1,16 @@
+.header__center{
+  margin: auto;
+  position: absolute;
+  right: 0;
+  left: 0;
+  width: max-content;
+}
+
+
+.view-product{
+  display: flex;
+  flex-direction: column;
+  .product_image{
+    margin: auto;
+  }
+}

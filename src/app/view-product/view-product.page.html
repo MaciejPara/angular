@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button defaultHref="/"></ion-back-button>
+      <ion-label class="header__center">{{product.name}}</ion-label>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" *ngIf="product" >
+  <div class="ion-padding view-product">
+    <h2>Price: {{product.price}}</h2>
+    <img class="product_image" src="{{ product.img }}" alt="">
+    <p>
+      {{product.description}}
+    </p>
+  </div>
+</ion-content>
+
+
